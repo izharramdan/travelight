@@ -1,14 +1,18 @@
 import "./App.css";
 import Register from "./components/Register";
 import LoginLogout from "./components/LoginLogout";
-import AllUser from "./components/AllUser";
+import Banner from "./components/Banner";
+import Promo from "./components/Promo";
+import Categories from "./components/Category";
 
 function App() {
   return (
     <div>
       <Register />
       <LoginLogout />
-      {/* <AllUser /> */}
+      {/* <Promo /> */}
+      {/* <Banner /> */}
+      {/* <Categories /> */}
     </div>
   );
 }

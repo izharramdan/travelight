@@ -1,0 +1,127 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+function PromoUpdate() {
+  const [promos, setPromos] = useState([]);
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [titleUpdate, setTitleUpdate] = useState("");
+  const [descriptionUpdate, setDescriptionUpdate] = useState("");
+  const [pictureUpdate, setPictureUpdate] = useState("");
+  const [termUpdate, setTermUpdate] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/promos",
+        {
+          headers: {
+            apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
+          },
+        }
+      )
+      .then((response) => {
+        const promos = response.data.data;
+        console.log(response.data);
+        setPromos(promos);
+        setTitleUpdate(response.data.data.title);
+        setDescriptionUpdate(response.data.data.description);
+        setPictureUpdate(response.data.data.imageUrl);
+        setTermUpdate(response.data.data.terms_condition);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+  }, []);
+
+  const updatePromo = (promoId) => {
+    axios
+      .post(
+        `https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/update-promo/${promoId}`,
+        {
+          title: titleUpdate,
+          description: descriptionUpdate,
+          imageUrl: pictureUpdate,
+          terms_condition: termUpdate,
+        },
+        {
+          headers: {
+            apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
+            Authorization: `bearer ${token}`,
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data);
+        window.location.reload();
+        // Lakukan tindakan setelah berhasil memperbarui promo
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+        // Lakukan tindakan jika terjadi kesalahan dalam memperbarui promo
+      });
+  };
+
+  const deletePromo = (promoId) => {
+    axios
+      .delete(
+        `https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/delete-promo/${promoId}`,
+        {
+          headers: {
+            apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
+            Authorization: `bearer ${token}`,
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data);
+        // window.location.reload();
+        setPromos((prevPromos) => prevPromos.filter((promo) => promo.id !== promoId));
+        // Lakukan tindakan setelah berhasil menghapus promo
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+        // Lakukan tindakan jika terjadi kesalahan dalam menghapus promo
+      });
+  };
+
+  return (
+    <div>
+      {promos.map((promo) => (
+        <div key={promo.id}>
+          <p>{promo.id}</p>
+          <p>{promo.title}</p>
+          <img src={promo.imageUrl} alt={promo.title} />
+          <input
+            type="text"
+            placeholder="New Title"
+            // value={titleUpdate}
+            onChange={(e) => setTitleUpdate(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="New Description"
+            // value={descriptionUpdate}
+            onChange={(e) => setDescriptionUpdate(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="New Picture URL"
+            // value={pictureUpdate}
+            onChange={(e) => setPictureUpdate(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="New Term"
+            // value={termUpdate}
+            onChange={(e) => setTermUpdate(e.target.value)}
+          />
+          <button onClick={() => updatePromo(promo.id)}>Update</button>
+          <button onClick={() => deletePromo(promo.id)}>Delete</button>
+        </div>
+      ))}
+    </div>
+  );
+  
+}
+
+export default PromoUpdate
