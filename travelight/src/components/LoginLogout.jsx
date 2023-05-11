@@ -35,6 +35,7 @@ function LoginLogout() {
         console.log(response.data);
         setToken(response.data.token);
         localStorage.setItem("token", response.data.token);
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error.response.data);
@@ -58,6 +59,7 @@ function LoginLogout() {
         console.log(response.data);
         setToken(null);
         localStorage.removeItem("token");
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error.response.data);
@@ -78,11 +80,11 @@ function LoginLogout() {
       {token ? (
         <div>
           <p>You are logged in!</p>
-          <UserProfile />
-          <CategoryCreate />
-          <CategoryUpdate />
+          {/* <UserProfile /> */}
+          {/* <CategoryCreate /> */}
+          {/* <CategoryUpdate /> */}
           {/* <PromoUpdate /> */}
-          <PromoCreate />
+          {/* <PromoCreate /> */}
           {/* <Banner /> */}
           {/* <BannerUpdate /> */}
           {/* <BannerCreate /> */}

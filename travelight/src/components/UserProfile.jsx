@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import AllUser from "./AllUser";
+// import AllUser from "./AllUser";
 
 function UserProfile() {
   const [user, setUser] = useState(null);
@@ -58,7 +58,10 @@ function UserProfile() {
         alert("Error Update Data. Try Again!.");
       });
   };
-
+  if (!token) {
+    return <div>Please log in to view this page.</div>;
+  }
+  
   return (
     <div className="edit-account">
       <div className="container">
@@ -108,7 +111,7 @@ function UserProfile() {
           />
           <button type="submit">Save Changes</button>
         </form>
-        <AllUser />
+        {/* <AllUser /> */}
       </div>
     </div>
   );

@@ -8,6 +8,9 @@ function PromoUpdate() {
   const [descriptionUpdate, setDescriptionUpdate] = useState("");
   const [pictureUpdate, setPictureUpdate] = useState("");
   const [termUpdate, setTermUpdate] = useState("");
+  const [codeUpdate, setCodeUpdate] = useState("");
+  const [discPriceUpdate, setDiscPriceUpdate] = useState(0);
+  const [claimPriceUpdate, setClaimPriceUpdate] = useState(0);
 
   useEffect(() => {
     axios
@@ -27,6 +30,9 @@ function PromoUpdate() {
         setDescriptionUpdate(response.data.data.description);
         setPictureUpdate(response.data.data.imageUrl);
         setTermUpdate(response.data.data.terms_condition);
+        setCodeUpdate(response.data.data.promo_code);
+        setDiscPriceUpdate(response.data.data.promo_discount_price);
+        setClaimPriceUpdate(response.data.data.minimum_claim_price);
       })
       .catch((error) => {
         console.log(error.response.data);
@@ -42,6 +48,9 @@ function PromoUpdate() {
           description: descriptionUpdate,
           imageUrl: pictureUpdate,
           terms_condition: termUpdate,
+          promo_code: codeUpdate,
+          promo_discount_price: parseInt(discPriceUpdate),
+          minimum_claim_price: parseInt(claimPriceUpdate),
         },
         {
           headers: {
@@ -75,7 +84,9 @@ function PromoUpdate() {
       .then((response) => {
         console.log(response.data);
         // window.location.reload();
-        setPromos((prevPromos) => prevPromos.filter((promo) => promo.id !== promoId));
+        setPromos((prevPromos) =>
+          prevPromos.filter((promo) => promo.id !== promoId)
+        );
         // Lakukan tindakan setelah berhasil menghapus promo
       })
       .catch((error) => {
@@ -94,26 +105,44 @@ function PromoUpdate() {
           <input
             type="text"
             placeholder="New Title"
-            // value={titleUpdate}
+            value={titleUpdate}
             onChange={(e) => setTitleUpdate(e.target.value)}
           />
           <input
             type="text"
             placeholder="New Description"
-            // value={descriptionUpdate}
+            value={descriptionUpdate}
             onChange={(e) => setDescriptionUpdate(e.target.value)}
           />
           <input
             type="text"
             placeholder="New Picture URL"
-            // value={pictureUpdate}
+            value={pictureUpdate}
             onChange={(e) => setPictureUpdate(e.target.value)}
           />
           <input
             type="text"
             placeholder="New Term"
-            // value={termUpdate}
+            value={termUpdate}
             onChange={(e) => setTermUpdate(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="New Promo Code"
+            value={codeUpdate}
+            onChange={(e) => setCodeUpdate(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="New Discount Price"
+            value={discPriceUpdate}
+            onChange={(e) => setDiscPriceUpdate(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="New Minimum Claim Price"
+            value={claimPriceUpdate}
+            onChange={(e) => setClaimPriceUpdate(e.target.value)}
           />
           <button onClick={() => updatePromo(promo.id)}>Update</button>
           <button onClick={() => deletePromo(promo.id)}>Delete</button>
@@ -121,7 +150,6 @@ function PromoUpdate() {
       ))}
     </div>
   );
-  
 }
 
-export default PromoUpdate
+export default PromoUpdate;

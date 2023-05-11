@@ -20,7 +20,12 @@ function PromoCreate() {
     axios
       .post(
         "https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/create-promo",
-        promo,
+        {
+          ...promo,
+          promo_discount_price: parseInt(promo.promo_discount_price),
+          minimum_claim_price: parseInt(promo.minimum_claim_price),
+        },
+
         {
           headers: {
             apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
