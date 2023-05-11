@@ -24,8 +24,8 @@ function Promo() {
       });
   }, []);
   return (
-    <div>
-      {promos.map((promo) => (
+    <div className="promo-card">
+      {promos.slice(0, 3).map((promo) => (
         <div key={promo.id}>
           <p>{promo.id}</p>
           <p>{promo.title}</p>

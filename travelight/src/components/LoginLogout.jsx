@@ -82,7 +82,7 @@ function LoginLogout() {
           <CategoryCreate />
           <CategoryUpdate />
           {/* <PromoUpdate /> */}
-          {/* <PromoCreate /> */}
+          <PromoCreate />
           {/* <Banner /> */}
           {/* <BannerUpdate /> */}
           {/* <BannerCreate /> */}

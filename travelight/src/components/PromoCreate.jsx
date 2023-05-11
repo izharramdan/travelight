@@ -3,7 +3,7 @@ import axios from "axios";
 
 function PromoCreate() {
   const [token, setToken] = useState(localStorage.getItem("token"));
-  const [promo, setpromo] = useState({
+  const [promo, setPromo] = useState({
     title: "",
     description: "",
     imageUrl: "",
@@ -37,8 +37,9 @@ function PromoCreate() {
       });
   };
   const handleChange = (event) => {
-    setpromo({ ...promo, [event.target.name]: event.target.value });
+    setPromo({ ...promo, [event.target.name]: event.target.value });
   };
+
   useEffect(() => {
     setError(null);
   }, [promo]);
