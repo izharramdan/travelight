@@ -148,7 +148,7 @@ function BannerUpdate() {
   };
 
   return (
-    <div className="dashboard-menu">
+    <div className="dashboard-update-banner">
       <div className="sidebar">
         TraveLight
         <ul>
@@ -181,7 +181,7 @@ function BannerUpdate() {
           </div>
         </ul>
       </div>
-      <div>
+      <div className="banner-update">
         {banners.map((banner) => (
           <div key={banner.id}>
             <p>{banner.id}</p>

@@ -39,7 +39,7 @@ function BannerCreate() {
   }, [banner]);
 
   return (
-    <div className="dashboard-container">
+    <div className="dashbooard-create-banner">
       <div className="sidebar">
         TraveLight
         <ul>

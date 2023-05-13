@@ -13,7 +13,6 @@ import PromoCreate from "./components/PromoCreate.jsx";
 import PromoUpdate from "./components/PromoUpdate.jsx";
 import CategoryCreate from "./components/CategoryCreate.jsx";
 import CategoryUpdate from "./components/CategoryUpdate.jsx";
-import Admin from "./components/Admin.jsx";
 
 
 const router = createBrowserRouter([
@@ -131,8 +130,6 @@ const router = createBrowserRouter([
     element: (
       <>
       <AllUser />
-        {/* <Sidebar /> */}
-        {/* <Admin /> */}
       </>
     ),
   },

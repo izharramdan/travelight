@@ -71,7 +71,7 @@ function AllUser() {
   // };
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-user-container">
       <div className="sidebar">
         TraveLight
         <ul>
@@ -137,7 +137,7 @@ function AllUser() {
                         <option value="admin">admin</option>
                         <option value="user">user</option>
                       </select>
-                      <button type="submit">Submit</button>
+                      {/* <button type="submit">Submit</button> */}
                     </form>
                   </td>
                   <td>{user.profilePictureUrl}</td>

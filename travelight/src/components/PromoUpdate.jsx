@@ -96,58 +96,92 @@ function PromoUpdate() {
   };
 
   return (
-    <div>
-      {promos.map((promo) => (
-        <div key={promo.id}>
-          <p>{promo.id}</p>
-          <p>{promo.title}</p>
-          <img src={promo.imageUrl} alt={promo.title} />
-          <input
-            type="text"
-            placeholder="New Title"
-            value={titleUpdate}
-            onChange={(e) => setTitleUpdate(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="New Description"
-            value={descriptionUpdate}
-            onChange={(e) => setDescriptionUpdate(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="New Picture URL"
-            value={pictureUpdate}
-            onChange={(e) => setPictureUpdate(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="New Term"
-            value={termUpdate}
-            onChange={(e) => setTermUpdate(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="New Promo Code"
-            value={codeUpdate}
-            onChange={(e) => setCodeUpdate(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="New Discount Price"
-            value={discPriceUpdate}
-            onChange={(e) => setDiscPriceUpdate(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="New Minimum Claim Price"
-            value={claimPriceUpdate}
-            onChange={(e) => setClaimPriceUpdate(e.target.value)}
-          />
-          <button onClick={() => updatePromo(promo.id)}>Update</button>
-          <button onClick={() => deletePromo(promo.id)}>Delete</button>
-        </div>
-      ))}
+    <div className="dashboard-update-promo">
+      <div className="sidebar">
+        TraveLight
+        <ul>
+          <div>
+            <a href="/Admin">User Role</a>
+          </div>
+          <div>
+            <a href="/CreateBanner">Create Banner</a>
+          </div>
+          <div>
+            <a href="/UpdateBanner">Update Banner</a>
+          </div>
+          <div>
+            <a href="/CreatePromo">Create Promo</a>
+          </div>
+          <div>
+            <a href="/UpdatePromo">Update Promo</a>
+          </div>
+          <div>
+            <a href="/CreateCategory">Create Category</a>
+          </div>
+          <div>
+            <a href="/UpdateCategory">Update Category</a>
+          </div>
+          <div>
+            <a href="/CreateActivity">Create Activity</a>
+          </div>
+          <div>
+            <a href="/UpdateActivity">Update Activity</a>
+          </div>
+        </ul>
+      </div>
+      <div>
+        {promos.map((promo) => (
+          <div key={promo.id}>
+            <p>{promo.id}</p>
+            <p>{promo.title}</p>
+            <img src={promo.imageUrl} alt={promo.title} />
+            <input
+              type="text"
+              placeholder="New Title"
+              value={titleUpdate}
+              onChange={(e) => setTitleUpdate(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="New Description"
+              value={descriptionUpdate}
+              onChange={(e) => setDescriptionUpdate(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="New Picture URL"
+              value={pictureUpdate}
+              onChange={(e) => setPictureUpdate(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="New Term"
+              value={termUpdate}
+              onChange={(e) => setTermUpdate(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="New Promo Code"
+              value={codeUpdate}
+              onChange={(e) => setCodeUpdate(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="New Discount Price"
+              value={discPriceUpdate}
+              onChange={(e) => setDiscPriceUpdate(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="New Minimum Claim Price"
+              value={claimPriceUpdate}
+              onChange={(e) => setClaimPriceUpdate(e.target.value)}
+            />
+            <button onClick={() => updatePromo(promo.id)}>Update</button>
+            <button onClick={() => deletePromo(promo.id)}>Delete</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
