@@ -73,7 +73,9 @@ function AllUser() {
   return (
     <div className="dashboard-user-container">
       <div className="sidebar">
-        TraveLight
+        <a className="logo" href="/">
+          TraveLight
+        </a>
         <ul>
           <div>
             <a href="/Admin">User Role</a>
@@ -96,9 +98,9 @@ function AllUser() {
           <div>
             <a href="/UpdateCategory">Update Category</a>
           </div>
-          <div>
+          {/* <div>
             <a href="/CreateActivity">Create Activity</a>
-          </div>
+          </div> */}
           <div>
             <a href="/UpdateActivity">Update Activity</a>
           </div>

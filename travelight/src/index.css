@@ -384,8 +384,12 @@ body {
   width: 250px;
   background-color: #000000;
   padding: 20px;
-  color: #31bfb1;
+
   height: 100vh;
+}
+
+.sidebar .logo {
+  color: #31bfb1;
 }
 
 .content {
@@ -523,3 +527,22 @@ button[type="submit"]:hover {
   width: 200px;
   height: auto;
 }
+
+/* promo end */
+
+/* category start */
+
+.dashboard-create-category {
+  display: flex;
+}
+
+.dashboard-update-category {
+  display: flex;
+}
+
+.dashboard-update-category > div img {
+  width: 200px;
+  height: auto;
+}
+
+/* category end */

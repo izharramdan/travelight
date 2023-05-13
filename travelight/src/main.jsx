@@ -13,6 +13,7 @@ import PromoCreate from "./components/PromoCreate.jsx";
 import PromoUpdate from "./components/PromoUpdate.jsx";
 import CategoryCreate from "./components/CategoryCreate.jsx";
 import CategoryUpdate from "./components/CategoryUpdate.jsx";
+import Activity from "./components/Activity.jsx";
 
 
 const router = createBrowserRouter([
@@ -112,19 +113,19 @@ const router = createBrowserRouter([
     element: (
       <>
         {/* <Navbar /> */}
-        <CategoryUpdate />
+        <Activity />
       </>
     ),
   },
-  {
-    path: "/CreateActivity",
-    element: (
-      <>
-        {/* <Navbar /> */}
-        <CategoryCreate />
-      </>
-    ),
-  },
+  // {
+  //   path: "/CreateActivity",
+  //   element: (
+  //     <>
+  //       {/* <Navbar /> */}
+  //       <CategoryCreate />
+  //     </>
+  //   ),
+  // },
   {
     path: "/Admin",
     element: (

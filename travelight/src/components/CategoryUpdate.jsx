@@ -78,28 +78,64 @@ function CategoryUpdate() {
   };
 
   return (
-    <div>
-      {categories.map((category) => (
-        <div key={category.id}>
-          <p>{category.id}</p>
-          <p>{category.name}</p>
-          <img src={category.imageUrl} alt={category.name} />
-          <input
-            type="text"
-            placeholder="New Name"
-            // value={titleUpdate}
-            onChange={(e) => setNameUpdate(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="New Picture URL"
-            // value={pictureUpdate}
-            onChange={(e) => setPictureUpdate(e.target.value)}
-          />
-          <button onClick={() => updateCategory(category.id)}>Update</button>
-          <button onClick={() => deleteCategory(category.id)}>Delete</button>
-        </div>
-      ))}
+    <div className="dashboard-update-category">
+      <div className="sidebar">
+        <a className="logo" href="/">
+          TraveLight
+        </a>
+        <ul>
+          <div>
+            <a href="/Admin">User Role</a>
+          </div>
+          <div>
+            <a href="/CreateBanner">Create Banner</a>
+          </div>
+          <div>
+            <a href="/UpdateBanner">Update Banner</a>
+          </div>
+          <div>
+            <a href="/CreatePromo">Create Promo</a>
+          </div>
+          <div>
+            <a href="/UpdatePromo">Update Promo</a>
+          </div>
+          <div>
+            <a href="/CreateCategory">Create Category</a>
+          </div>
+          <div>
+            <a href="/UpdateCategory">Update Category</a>
+          </div>
+          {/* <div>
+            <a href="/CreateActivity">Create Activity</a>
+          </div> */}
+          <div>
+            <a href="/UpdateActivity">Update Activity</a>
+          </div>
+        </ul>
+      </div>
+      <div>
+        {categories.map((category) => (
+          <div key={category.id}>
+            <p>{category.id}</p>
+            <p>{category.name}</p>
+            <img src={category.imageUrl} alt={category.name} />
+            <input
+              type="text"
+              placeholder="New Name"
+              // value={titleUpdate}
+              onChange={(e) => setNameUpdate(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="New Picture URL"
+              // value={pictureUpdate}
+              onChange={(e) => setPictureUpdate(e.target.value)}
+            />
+            <button onClick={() => updateCategory(category.id)}>Update</button>
+            <button onClick={() => deleteCategory(category.id)}>Delete</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

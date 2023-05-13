@@ -98,7 +98,9 @@ function PromoUpdate() {
   return (
     <div className="dashboard-update-promo">
       <div className="sidebar">
-        TraveLight
+        <a className="logo" href="/">
+          TraveLight
+        </a>
         <ul>
           <div>
             <a href="/Admin">User Role</a>
@@ -121,9 +123,9 @@ function PromoUpdate() {
           <div>
             <a href="/UpdateCategory">Update Category</a>
           </div>
-          <div>
+          {/* <div>
             <a href="/CreateActivity">Create Activity</a>
-          </div>
+          </div> */}
           <div>
             <a href="/UpdateActivity">Update Activity</a>
           </div>
