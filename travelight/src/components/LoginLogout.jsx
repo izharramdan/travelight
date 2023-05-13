@@ -111,7 +111,9 @@ function LoginLogout() {
           />
 
           <button type="submit">Login</button>
+          <p>Dont have an account? click <a href="/Register">register</a></p>
         </form>
+        
       )}
     </div>
   );

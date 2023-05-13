@@ -24,16 +24,20 @@ function Promo() {
       });
   }, []);
   return (
+    <>
+    <h1>Check Out Our Offers</h1>
     <div className="promo-card">
       {promos.slice(0, 3).map((promo) => (
         <div key={promo.id}>
-          <p>{promo.id}</p>
-          <p>{promo.title}</p>
-          <p>{promo.description}</p>
+          
           <img src={promo.imageUrl}></img>
+          {/* <p>{promo.id}</p> */}
+          <p>{promo.title}</p>
+          {/* <p>{promo.description}</p> */}
         </div>
       ))}
     </div>
+    </>
   );
 }
 

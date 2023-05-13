@@ -332,7 +332,7 @@ function Navbar() {
         className="collapse navbar-collapse justify-content-start"
       >
         <div className="navbar-nav mx-auto">
-          <a href="#" className="nav-item nav-link">
+          <a href="/" className="nav-item nav-link">
             Home
           </a>
           <a href="#" className="nav-item nav-link">
@@ -359,20 +359,27 @@ function Navbar() {
                   Logout
                 </a> */}
                 <a
-              href="#"
-              className="nav-link dropdown-toggle mr-4"
-              role="button"
-              data-bs-toggle="dropdown"
-              onClick={handleProfile}
-            >
-              My Profile
-            </a>
-            <ul className="dropdown-menu action-form">
-
-                  <li><a href="#">Edit Profile</a></li>
-                  <li onClick={handleLogout}><button href="#">Logout</button></li>
-
-            </ul>
+                  href="#"
+                  className="nav-link dropdown-toggle mr-4"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  // onClick={handleProfile}
+                >
+                  My Profile
+                </a>
+                <ul className="dropdown-menu action-form">
+                  <li>
+                    <div>
+                      <a href="/UserProfile">Edit Profile</a>
+                    </div>
+                    <div>
+                      <a href="/Admin">Admisitrator</a>
+                    </div>
+                  </li>
+                  <li onClick={handleLogout}>
+                    <button href="#">Logout</button>
+                  </li>
+                </ul>
                 {/* <div
                   className={`dropdown-menu action-form ${
                     showProfile ? "show" : ""

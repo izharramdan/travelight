@@ -10,14 +10,14 @@ import UserProfile from "./components/UserProfile";
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <LoginLogout /> */}
-      <UserProfile />
+      {/* <UserProfile /> */}
       {/* <Register /> */}
 
-      {/* <Banner /> */}
-      {/* <Promo /> */}
-      {/* <Categories /> */}
+      <Banner />
+      <Promo />
+      <Categories />
     </div>
   );
 }

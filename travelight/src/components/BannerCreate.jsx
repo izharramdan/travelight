@@ -39,17 +39,62 @@ function BannerCreate() {
   }, [banner]);
 
   return (
-    <form onSubmit={handleCreate}>
-      <label htmlFor="name">Banner Name:</label>
-      <input type="name" name="name" value={banner.name} onChange={handleChange} required />
+    <div className="dashboard-container">
+      <div className="sidebar">
+        TraveLight
+        <ul>
+          <div>
+            <a href="/Admin">User Role</a>
+          </div>
+          <div>
+            <a href="/CreateBanner">Create Banner</a>
+          </div>
+          <div>
+            <a href="/UpdateBanner">Update Banner</a>
+          </div>
+          <div>
+            <a href="/CreatePromo">Create Promo</a>
+          </div>
+          <div>
+            <a href="/UpdatePromo">Update Promo</a>
+          </div>
+          <div>
+            <a href="/CreateCategory">Create Category</a>
+          </div>
+          <div>
+            <a href="/UpdateCategory">Update Category</a>
+          </div>
+          <div>
+            <a href="/CreateActivity">Create Activity</a>
+          </div>
+          <div>
+            <a href="/UpdateActivity">Update Activity</a>
+          </div>
+        </ul>
+      </div>
+      <form onSubmit={handleCreate}>
+        <label htmlFor="name">Banner Name:</label>
+        <input
+          type="name"
+          name="name"
+          value={banner.name}
+          onChange={handleChange}
+          required
+        />
 
-      <label htmlFor="imageUrl">URL:</label>
-      <input type="text" name="imageUrl" value={banner.imageUrl} onChange={handleChange} required />
+        <label htmlFor="imageUrl">URL:</label>
+        <input
+          type="text"
+          name="imageUrl"
+          value={banner.imageUrl}
+          onChange={handleChange}
+          required
+        />
 
-      <button type="submit">Create</button>
-    </form>
+        <button type="submit">Create</button>
+      </form>
+    </div>
   );
-
 }
 
-export default BannerCreate
+export default BannerCreate;

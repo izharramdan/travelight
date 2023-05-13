@@ -25,15 +25,18 @@ function Categories() {
   }, []);
 
   return (
-    <div>
-      {categories.map((category) => (
-        <div key={category.id}>
-          <p>{category.id}</p>
-          <p>{category.name}</p>
-          <img src={category.imageUrl}></img>
-        </div>
-      ))}
-    </div>
+    <>
+      <h1>Where to go</h1>
+      <div className="category-card">
+        {categories.slice(0, 3).map((category) => (
+          <div key={category.id}>
+            {/* <p>{category.id}</p> */}
+            <img src={category.imageUrl}></img>
+            <p>{category.name}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

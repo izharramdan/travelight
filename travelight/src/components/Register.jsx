@@ -43,29 +43,28 @@ function Register() {
   }, [formData]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      {/* {error && <p>{error.message}</p>} */}
+    <form onSubmit={handleSubmit} className="register-form">
       <label htmlFor="email">Email:</label>
       <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-
+  
       <label htmlFor="name">Name:</label>
       <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-
+  
       <label htmlFor="password">Password:</label>
       <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-
+  
       <label htmlFor="passwordRepeat">Repeat Password:</label>
       <input type="password" name="passwordRepeat" value={formData.passwordRepeat} onChange={handleChange} required />
-
+  
       <label htmlFor="role">Role:</label>
       <input type="text" name="role" value={formData.role} onChange={handleChange} required />
-
+  
       <label htmlFor="profilePictureUrl">Profile Picture URL:</label>
       <input type="url" name="profilePictureUrl" value={formData.profilePictureUrl} onChange={handleChange} required />
-
+  
       <label htmlFor="phoneNumber">Phone Number:</label>
       <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} required />
-
+  
       <button type="submit">Register</button>
     </form>
   );
