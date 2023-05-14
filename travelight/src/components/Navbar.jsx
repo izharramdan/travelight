@@ -316,7 +316,7 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg">
-      <a href="#" className="navbar-brand">
+      <a href="/" className="navbar-brand">
         Trave<span>Light</span>
       </a>
       <button
