@@ -295,6 +295,7 @@ body {
 .banner img {
   margin-top: -200px;
   max-width: 100%;
+  width: 300vw;
 }
 
 /* banner end */

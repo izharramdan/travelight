@@ -26,7 +26,7 @@ function Banner() {
 
   return (
 <div className="banner">
-  {banners.slice(0, 1).map((banner) => (
+  {banners.slice(3, 4).map((banner) => (
     <div key={banner.id}>
       <p>{banner.id}</p>
       <p>{banner.name}</p>
