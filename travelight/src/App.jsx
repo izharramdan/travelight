@@ -6,6 +6,7 @@ import Promo from "./components/Promo";
 import Categories from "./components/Category";
 import Navbar from "./components/Navbar";
 import UserProfile from "./components/UserProfile";
+import BannerID from "./components/BannerID";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <UserProfile /> */}
       {/* <Register /> */}
 
-      <Banner />
+      {/* <Banner /> */}
+      <BannerID />
       <Promo />
       <Categories />
     </div>
