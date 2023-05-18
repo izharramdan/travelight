@@ -316,6 +316,16 @@ body {
   border-radius: 25px;
 }
 
+.card-img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.card {
+  width: 70%;
+  border-radius: 25px;
+}
+
 /* promo end */
 
 /* category start */
@@ -509,6 +519,10 @@ button[type="submit"]:hover {
 .banner-update {
   flex: 1;
   padding: 20px;
+}
+
+.banner-hero {
+  text-align:end;
 }
 
 /* banner end */

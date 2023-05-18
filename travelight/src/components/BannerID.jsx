@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function BannerID() {
-  const [bannerId, setBannerId] = useState([]);
+  const [bannerId, setBannerId] = useState({});
 
   useEffect(() => {
     axios
@@ -27,11 +27,17 @@ function BannerID() {
   return (
     <div className="banner">
       {bannerId && (
-        <div>
-          <p>{bannerId.id}</p>
-          <p>{bannerId.name}</p>
-          <img src={bannerId.imageUrl} alt={bannerId.name} />
-        </div>
+        <>
+
+          <div>
+            <p>{bannerId.id}</p>
+            <p>{bannerId.name}</p>
+            <img src={bannerId.imageUrl} alt={bannerId.name} />
+          </div>
+          <div>
+            <h1 className="banner-hero">Your Travel Buddy to everywhere</h1>
+          </div>
+        </>
       )}
     </div>
   );

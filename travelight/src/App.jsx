@@ -7,6 +7,8 @@ import Categories from "./components/Category";
 import Navbar from "./components/Navbar";
 import UserProfile from "./components/UserProfile";
 import BannerID from "./components/BannerID";
+import PromoID from "./components/PromoID";
+import CategoryID from "./components/CategoryID";
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
       {/* <Banner /> */}
       <BannerID />
       <Promo />
-      <Categories />
+      {/* <PromoID /> */}
+      {/* <Categories /> */}
+      <CategoryID />
     </div>
   );
 }

@@ -24,20 +24,27 @@ function Promo() {
       });
   }, []);
   return (
-    <>
-    <h1>Check Out Our Offers</h1>
-    <div className="promo-card">
-      {promos.slice(0, 3).map((promo) => (
-        <div key={promo.id}>
-          
-          <img src={promo.imageUrl}></img>
-          {/* <p>{promo.id}</p> */}
-          <p>{promo.title}</p>
-          {/* <p>{promo.description}</p> */}
-        </div>
-      ))}
+    <div>
+      <h1>Check Out Our Offers</h1>
+      <div className="row">
+        {promos.slice(0, 3).map((promo) => (
+          <div key={promo.id} className="col-md-4">
+            <div className="card promo-card">
+              <img
+                src={promo.imageUrl}
+                className="card-img-top"
+                alt={promo.title}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{promo.title}</h5>
+                {/* <p className="card-text">{promo.description}</p>
+                <p className="card-text">{promo.terms_condition}</p> */}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-    </>
   );
 }
 
