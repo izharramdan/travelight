@@ -16,10 +16,10 @@ function Sidebar() {
             href="/"
           >
             <div className="sidebar-brand-icon rotate-n-15">
-              <i className="fas fa-laugh-wink" />
+              
             </div>
             <div className="sidebar-brand-text mx-3">
-              SB Admin <sup>2</sup>
+              TraveLight
             </div>
           </a>
           {/* Divider */}
@@ -27,7 +27,7 @@ function Sidebar() {
           {/* Nav Item - Dashboard */}
           <li className="nav-item active">
             <a className="nav-link" href="/">
-              <i className="fas fa-fw fa-tachometer-alt" />
+              
               <span>Dashboard</span>
             </a>
           </li>
@@ -43,7 +43,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseTwo"
             >
-              <i className="fas fa-fw fa-cog" />
+              
               <span>User Role</span>
             </a>
             <div
@@ -63,7 +63,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Create Banner</span>
             </a>
           </li>
@@ -76,7 +76,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Update Banner</span>
             </a>
           </li>
@@ -89,7 +89,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Create Promo</span>
             </a>
           </li>
@@ -102,7 +102,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Update Promo</span>
             </a>
           </li>
@@ -115,7 +115,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Create Category</span>
             </a>
           </li>
@@ -128,7 +128,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Update Category</span>
             </a>
           </li>
@@ -141,7 +141,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Create Activity</span>
             </a>
           </li>
@@ -154,7 +154,7 @@ function Sidebar() {
               aria-expanded="true"
               aria-controls="collapseUtilities"
             >
-              <i className="fas fa-fw fa-wrench" />
+              
               <span>Update Activity</span>
             </a>
           </li>

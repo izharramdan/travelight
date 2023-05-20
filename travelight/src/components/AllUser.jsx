@@ -73,38 +73,7 @@ function AllUser() {
 
   return (
     <div className="dashboard-user-container">
-<Sidebar />
-      {/* <div className="sidebar">
-        <a className="logo" href="/">
-          TraveLight
-        </a>
-        <ul>
-          <div>
-            <a href="/Admin">User Role</a>
-          </div>
-          <div>
-            <a href="/CreateBanner">Create Banner</a>
-          </div>
-          <div>
-            <a href="/UpdateBanner">Update Banner</a>
-          </div>
-          <div>
-            <a href="/CreatePromo">Create Promo</a>
-          </div>
-          <div>
-            <a href="/UpdatePromo">Update Promo</a>
-          </div>
-          <div>
-            <a href="/CreateCategory">Create Category</a>
-          </div>
-          <div>
-            <a href="/UpdateCategory">Update Category</a>
-          </div>
-          <div>
-            <a href="/UpdateActivity">Update Activity</a>
-          </div>
-        </ul>
-      </div> */}
+      <Sidebar />
       <div className="content">
         <div className="container">
           <table className="user-table">
@@ -112,8 +81,8 @@ function AllUser() {
               <tr>
                 {/* <th>ID</th> */}
                 <th>Name</th>
-                <th>Profile Picture URL</th>
                 <th>Role</th>
+                <th>Profile Picture</th>
 
                 {/* <th>Action</th> */}
               </tr>
@@ -141,7 +110,10 @@ function AllUser() {
                       {/* <button type="submit">Submit</button> */}
                     </form>
                   </td>
-                  <td>{user.profilePictureUrl}</td>
+                  <td>
+                    {" "}
+                    <img src={user.profilePictureUrl} alt="" />
+                  </td>
                   <td></td>
                 </tr>
               ))}

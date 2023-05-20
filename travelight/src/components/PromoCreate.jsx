@@ -52,7 +52,7 @@ function PromoCreate() {
 
   return (
     <div className="dashboard-create-promo">
-<Sidebar />
+      <Sidebar />
       <form onSubmit={handleCreate}>
         <label htmlFor="name">Promo Title:</label>
         <input

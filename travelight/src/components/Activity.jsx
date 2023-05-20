@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Sidebar from "./Sidebar";
 
 const Activity = () => {
   const [nameAccount, setNameAccount] = useState("");
@@ -192,76 +193,7 @@ const Activity = () => {
 
   return (
     <div id="app">
-      <div id="sidebar" className="active">
-        <div className="sidebar-wrapper active">
-          <div className="sidebar-header">
-            <div className="d-flex justify-content-between">
-              <div className="logo">
-                <a href="./" className="logo">
-                  <h4>TraveLight </h4>
-                </a>
-              </div>
-              <div className="toggler">
-                <a href="#" className="sidebar-hide d-xl-none d-block">
-                  <i className="bi bi-x bi-middle" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="sidebar-menu">
-            <div className="col-12 col-lg-8">
-              <div className="card-body py-4 px-5">
-                <div className="d-flex align-items-center">
-                  <div className="avatar avatar-xl">
-                    <img src={pictureAccount} alt="Face 1" />
-                  </div>
-                  <div className="ms-3 name">
-                    <h6 className="font-bold">Hallo, {nameAccount}</h6>
-                    {/* <h6 className="text-muted mb-0">{emailAccount}</h6> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <ul className="menu">
-              <li className="sidebar-title">Menu</li>
-              <li className="sidebar-item active ">
-                <a href="/Admin" className="sidebar-link">
-                  <i className="bi bi-person-fill" />
-                  <span>User</span>
-                </a>
-              </li>
-              <li className="sidebar-item active ">
-                <a href="/Banner" className="sidebar-link">
-                  <i className="bi bi-image-fill" />
-                  <span>Banner</span>
-                </a>
-              </li>
-              <li className="sidebar-item active ">
-                <a href="/Promo" className="sidebar-link">
-                  <i className="bi bi-collection-fill" />
-                  <span>Promo</span>
-                </a>
-              </li>
-              <li className="sidebar-item active ">
-                <a href="/Category" className="sidebar-link">
-                  <i className="bi bi-card-list" />
-                  <span>Category</span>
-                </a>
-              </li>
-              <li className="sidebar-item active ">
-                <a href="/Activity" className="sidebar-link">
-                  <i className="bi bi-basket-fill" />
-                  <span>Activity</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <button className="sidebar-toggler btn x">
-            <i data-feather="x" />
-          </button>
-        </div>
-      </div>
+      <Sidebar />
       <div id="main">
         <header className="mb-3">
           <a href="#" className="burger-btn d-block d-xl-none">
@@ -770,11 +702,6 @@ const Activity = () => {
                   </div>
                 ))}
               </div>
-              {/* <div className="col-xl-4 col-md-6 col-sm-12"> 
-              </div>
-              <div className="col-xl-4 col-md-6 col-sm-12"></div>
-              <div className="col-md-6 col-sm-12"></div>
-              <div className="col-md-6 col-sm-12"></div> */}
             </div>
           </section>
         </div>

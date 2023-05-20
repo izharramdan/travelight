@@ -92,7 +92,7 @@ function Promo() {
     <div>
       <h1>Check Out Our Offers</h1>
       <div className="row">
-        {promos.slice(0, 3).map((promo) => (
+        {promos.slice(0, 4).map((promo) => (
           <div key={promo.id} className="col-md-4">
             <div className="card promo-card">
               <img

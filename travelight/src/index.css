@@ -87,9 +87,9 @@ body {
   /* opacity: .8; */
 }
 
-/* .navbar-nav {
-  padding-right: 15vw;
-} */
+.navbar-nav {
+  padding-left: 15vw;
+}
 
 .navbar-nav .nav-item {
   color: #000000;
@@ -254,12 +254,24 @@ body {
 
 /* sidebar start */
 
-/* .sidebar {
-  width: 200px;
+.sidebar {
+  width: 250px;
+  background-color: #000000;
+  padding: 20px;
   height: 100vh;
-  background-color: #333;
-  color: #fff;
-} */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  padding-right: 20px;
+  background-color: #fff; /* Ganti dengan warna latar belakang yang diinginkan */
+  z-index: 1000;
+}
+
+.sidebar .logo {
+  color: #31bfb1;
+}
 
 .logo {
   padding: 20px;
@@ -267,11 +279,6 @@ body {
   font-size: 24px;
   font-weight: bold;
 }
-
-/* #wrapper {
-  position: fixed;
-  display: flex;
-} */
 
 .sidebar-menu {
   list-style: none;
@@ -394,17 +401,11 @@ body {
 
 .dashboard-user-container {
   display: flex;
+  margin-left: 200px;
 }
 
-.sidebar {
-  width: 250px;
-  background-color: #000000;
-  padding: 20px;
-  height: 100vh;
-}
-
-.sidebar .logo {
-  color: #31bfb1;
+.dashboard-user-container img {
+  width: 50px;
 }
 
 .content {
@@ -511,13 +512,14 @@ button[type="submit"]:hover {
 
 /* banner start */
 
-.dashbooard-create-banner {
+.dashboard-create-banner {
   display: flex;
+  margin-left: 250px;
 }
 
 .dashboard-update-banner {
   display: flex;
-  justify-content: space-between;
+  margin-left: 250px;
 }
 
 .banner-update {
@@ -525,8 +527,12 @@ button[type="submit"]:hover {
   padding: 20px;
 }
 
+.banner-update img {
+  width: 200px;
+}
+
 .banner-hero {
-  text-align:end;
+  text-align: end;
 }
 
 /* banner end */
@@ -535,12 +541,13 @@ button[type="submit"]:hover {
 
 .dashboard-create-promo {
   display: flex;
+  margin-left: 250px;
 }
 
 .dashboard-update-promo {
   display: flex;
+  margin-left: 250px;
 }
-
 
 .dashboard-update-promo > div img {
   width: 200px;
@@ -553,10 +560,12 @@ button[type="submit"]:hover {
 
 .dashboard-create-category {
   display: flex;
+  margin-left: 250px;
 }
 
 .dashboard-update-category {
   display: flex;
+  margin-left: 250px;
 }
 
 .dashboard-update-category > div img {

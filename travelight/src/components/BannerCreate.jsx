@@ -40,7 +40,7 @@ function BannerCreate() {
   }, [banner]);
 
   return (
-    <div className="dashbooard-create-banner">
+    <div className="dashboard-create-banner">
       <Sidebar />
       {/* <div className="sidebar">
         <a className="logo" href="/">
