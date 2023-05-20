@@ -87,10 +87,9 @@ body {
   /* opacity: .8; */
 }
 
-.navbar-nav {
-  padding-left: 10vw;
-  /* padding-right: 15vw; */
-}
+/* .navbar-nav {
+  padding-right: 15vw;
+} */
 
 .navbar-nav .nav-item {
   color: #000000;
@@ -269,10 +268,15 @@ body {
   font-weight: bold;
 }
 
+/* #wrapper {
+  position: fixed;
+  display: flex;
+} */
+
 .sidebar-menu {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0px;
 }
 
 .sidebar-menu li {
@@ -334,6 +338,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 4vh;
+  overflow: auto;
 }
 
 .category-card img {
@@ -395,7 +400,6 @@ body {
   width: 250px;
   background-color: #000000;
   padding: 20px;
-
   height: 100vh;
 }
 

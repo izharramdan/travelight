@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Sidebar from "./Sidebar";
 
 function CategoryCreate() {
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -42,7 +43,8 @@ function CategoryCreate() {
 
   return (
     <div className="dashboard-create-category">
-      <div className="sidebar">
+      <Sidebar />
+      {/* <div className="sidebar">
         <a className="logo" href="/">
           TraveLight
         </a>
@@ -68,14 +70,11 @@ function CategoryCreate() {
           <div>
             <a href="/UpdateCategory">Update Category</a>
           </div>
-          {/* <div>
-            <a href="/CreateActivity">Create Activity</a>
-          </div> */}
           <div>
             <a href="/UpdateActivity">Update Activity</a>
           </div>
         </ul>
-      </div>
+      </div> */}
       <form onSubmit={handleCreate}>
         <label htmlFor="name">Category Name:</label>
         <input

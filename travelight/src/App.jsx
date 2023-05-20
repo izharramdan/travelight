@@ -22,8 +22,8 @@ function App() {
       <BannerID />
       <Promo />
       {/* <PromoID /> */}
-      {/* <Categories /> */}
-      <CategoryID />
+      <Categories />
+      {/* <CategoryID /> */}
     </div>
   );
 }

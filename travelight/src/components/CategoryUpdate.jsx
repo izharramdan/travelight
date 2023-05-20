@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Sidebar from "./Sidebar";
 
 function CategoryUpdate() {
   const [categories, setCategories] = useState([]);
@@ -79,7 +80,8 @@ function CategoryUpdate() {
 
   return (
     <div className="dashboard-update-category">
-      <div className="sidebar">
+<Sidebar />
+      {/* <div className="sidebar">
         <a className="logo" href="/">
           TraveLight
         </a>
@@ -105,14 +107,11 @@ function CategoryUpdate() {
           <div>
             <a href="/UpdateCategory">Update Category</a>
           </div>
-          {/* <div>
-            <a href="/CreateActivity">Create Activity</a>
-          </div> */}
           <div>
             <a href="/UpdateActivity">Update Activity</a>
           </div>
         </ul>
-      </div>
+      </div> */}
       <div>
         {categories.map((category) => (
           <div key={category.id}>

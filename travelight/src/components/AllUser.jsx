@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Sidebar from "./Sidebar";
 
 function AllUser() {
   const [users, setUsers] = useState([]);
@@ -72,7 +73,8 @@ function AllUser() {
 
   return (
     <div className="dashboard-user-container">
-      <div className="sidebar">
+<Sidebar />
+      {/* <div className="sidebar">
         <a className="logo" href="/">
           TraveLight
         </a>
@@ -98,14 +100,11 @@ function AllUser() {
           <div>
             <a href="/UpdateCategory">Update Category</a>
           </div>
-          {/* <div>
-            <a href="/CreateActivity">Create Activity</a>
-          </div> */}
           <div>
             <a href="/UpdateActivity">Update Activity</a>
           </div>
         </ul>
-      </div>
+      </div> */}
       <div className="content">
         <div className="container">
           <table className="user-table">

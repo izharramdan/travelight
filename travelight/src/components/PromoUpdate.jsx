@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Sidebar from "./Sidebar";
 
 function PromoUpdate() {
   const [promos, setPromos] = useState([]);
@@ -97,7 +98,8 @@ function PromoUpdate() {
 
   return (
     <div className="dashboard-update-promo">
-      <div className="sidebar">
+      <Sidebar />
+      {/* <div className="sidebar">
         <a className="logo" href="/">
           TraveLight
         </a>
@@ -123,14 +125,11 @@ function PromoUpdate() {
           <div>
             <a href="/UpdateCategory">Update Category</a>
           </div>
-          {/* <div>
-            <a href="/CreateActivity">Create Activity</a>
-          </div> */}
           <div>
             <a href="/UpdateActivity">Update Activity</a>
           </div>
         </ul>
-      </div>
+      </div> */}
       <div>
         {promos.map((promo) => (
           <div key={promo.id}>

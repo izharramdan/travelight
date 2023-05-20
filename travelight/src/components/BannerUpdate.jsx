@@ -64,6 +64,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Sidebar from "./Sidebar";
 
 function BannerUpdate() {
   const [banners, setBanners] = useState([]);
@@ -149,7 +150,8 @@ function BannerUpdate() {
 
   return (
     <div className="dashboard-update-banner">
-      <div className="sidebar">
+      <Sidebar />
+      {/* <div className="sidebar">
         <a className="logo" href="/">
           TraveLight
         </a>
@@ -175,14 +177,11 @@ function BannerUpdate() {
           <div>
             <a href="/UpdateCategory">Update Category</a>
           </div>
-          {/* <div>
-            <a href="/CreateActivity">Create Activity</a>
-          </div> */}
           <div>
             <a href="/UpdateActivity">Update Activity</a>
           </div>
         </ul>
-      </div>
+      </div> */}
       <div className="banner-update">
         {banners.map((banner) => (
           <div key={banner.id}>
