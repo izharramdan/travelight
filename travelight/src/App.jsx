@@ -20,7 +20,7 @@ function App() {
 
       {/* <Banner /> */}
       <BannerID />
-      <Promo />
+      {/* <Promo /> */}
       {/* <PromoID /> */}
       <Categories />
       {/* <CategoryID /> */}

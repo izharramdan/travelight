@@ -44,37 +44,6 @@ function CategoryCreate() {
   return (
     <div className="dashboard-create-category">
       <Sidebar />
-      {/* <div className="sidebar">
-        <a className="logo" href="/">
-          TraveLight
-        </a>
-        <ul>
-          <div>
-            <a href="/Admin">User Role</a>
-          </div>
-          <div>
-            <a href="/CreateBanner">Create Banner</a>
-          </div>
-          <div>
-            <a href="/UpdateBanner">Update Banner</a>
-          </div>
-          <div>
-            <a href="/CreatePromo">Create Promo</a>
-          </div>
-          <div>
-            <a href="/UpdatePromo">Update Promo</a>
-          </div>
-          <div>
-            <a href="/CreateCategory">Create Category</a>
-          </div>
-          <div>
-            <a href="/UpdateCategory">Update Category</a>
-          </div>
-          <div>
-            <a href="/UpdateActivity">Update Activity</a>
-          </div>
-        </ul>
-      </div> */}
       <form onSubmit={handleCreate}>
         <label htmlFor="name">Category Name:</label>
         <input
