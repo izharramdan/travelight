@@ -9,6 +9,8 @@ import UserProfile from "./components/UserProfile";
 import BannerID from "./components/BannerID";
 import PromoID from "./components/PromoID";
 import CategoryID from "./components/CategoryID";
+import ActivityID from "./components/ActivityID";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,9 +22,11 @@ function App() {
 
       {/* <Banner /> */}
       <BannerID />
-      {/* <Promo /> */}
+      <Promo />
       {/* <PromoID /> */}
-      <Categories />
+      <ActivityID />
+      <Footer />
+      {/* <Categories /> */}
       {/* <CategoryID /> */}
     </div>
   );

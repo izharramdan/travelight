@@ -43,10 +43,10 @@ function Navbar() {
           <a href="/" className="nav-item nav-link">
             Home
           </a>
-          <a href="#" className="nav-item nav-link">
+          <a href="#activity-show" className="nav-item nav-link">
             Category
           </a>
-          <a href="#" className="nav-item nav-link">
+          <a href="#promo-show" className="nav-item nav-link">
             Promo
           </a>
         </div>
@@ -59,7 +59,6 @@ function Navbar() {
                   className="nav-link dropdown-toggle mr-4"
                   role="button"
                   data-bs-toggle="dropdown"
-                  // onClick={handleProfile}
                 >
                   My Profile
                 </a>

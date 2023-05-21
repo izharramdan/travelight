@@ -89,11 +89,16 @@ function Promo() {
   };
 
   return (
-    <div>
-      <h1>Check Out Our Offers</h1>
+    <>
+    <div className="promo-title text-center">
+    <h1>Check Out Our Offers</h1>
+  </div>
+    <div className="promo-container" id="promo-show">
+    
+
       <div className="row">
         {promos.slice(0, 4).map((promo) => (
-          <div key={promo.id} className="col-md-4">
+          <div key={promo.id} className="col-sm-3">
             <div className="card promo-card">
               <img
                 src={promo.imageUrl}
@@ -101,7 +106,7 @@ function Promo() {
                 alt={promo.title}
               />
               <div className="card-body">
-                <h5 className="card-title">{promo.title}</h5>
+                <h5 className="promo-code">{promo.promo_code}</h5>
                 <button
                   className="btn btn-primary"
                   onClick={() => handleDetailClick(promo)}
@@ -158,6 +163,7 @@ function Promo() {
         </div>
       )}
     </div>
+    </>
   );
 }
 

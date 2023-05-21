@@ -35,7 +35,7 @@ function BannerID() {
             <img src={bannerId.imageUrl} alt={bannerId.name} />
           </div>
           <div>
-            <h1 className="banner-hero">Your Travel Buddy to everywhere</h1>
+            <h1 className="banner-hero">TraveLight, Your Travel Buddy to everywhere</h1>
           </div>
         </>
       )}

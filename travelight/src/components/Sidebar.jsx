@@ -132,7 +132,7 @@ function Sidebar() {
               <span>Update Category</span>
             </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a
               className="nav-link collapsed"
               href="/CreateActivity"
@@ -144,7 +144,7 @@ function Sidebar() {
               
               <span>Create Activity</span>
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a
               className="nav-link collapsed"

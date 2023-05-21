@@ -88,7 +88,7 @@ function LoginLogout() {
           {/* <Banner /> */}
           {/* <BannerUpdate /> */}
           {/* <BannerCreate /> */}
-          <button onClick={handleLogout}>Logout</button>
+          <button classNames="btn btn-warning"  onClick={handleLogout}>Logout</button>
         </div>
       ) : (
         <form onSubmit={handleLogin}>
