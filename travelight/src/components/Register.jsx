@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -31,7 +31,7 @@ function Register() {
       .then((response) => {
         console.log(response.data);
         alert("Registration successful!");
-        navigate('/');ya
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.response.data);
@@ -46,7 +46,6 @@ function Register() {
   useEffect(() => {
     setError(null);
   }, [formData]);
-  
 
   return (
     <form onSubmit={handleSubmit} className="register-form">
@@ -199,7 +198,6 @@ export default Register;
 //   useEffect(() => {
 //     setError(null);
 //   }, [formData]);
-  
 
 //   return (
 //     <form onSubmit={handleSubmit} className="register-form">
