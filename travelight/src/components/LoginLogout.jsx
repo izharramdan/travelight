@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import UserProfile from "./UserProfile";
-import Banner from "./Banner";
-import BannerUpdate from "./BannerUpdate";
-import BannerCreate from "./BannerCreate";
-import PromoUpdate from "./PromoUpdate";
-import PromoCreate from "./PromoCreate";
-import CategoryUpdate from "./CategoryUpdate";
-import CategoryCreate from "./CategoryCreate";
-
 
 function LoginLogout() {
   const [formLogin, setFormLogin] = useState({
@@ -35,11 +26,12 @@ function LoginLogout() {
         console.log(response.data);
         setToken(response.data.token);
         localStorage.setItem("token", response.data.token);
+        setError(null); // Reset error state on successful login
         window.location.reload();
       })
       .catch((error) => {
         console.log(error.response.data);
-        setError(error.response.data);
+        setError("Invalid email or password. Please try again.");
         localStorage.setItem("token", error.response.data.token);
       });
   };
@@ -63,7 +55,7 @@ function LoginLogout() {
       })
       .catch((error) => {
         console.log(error.response.data);
-        setError(error.response.data);
+        setError("Logout failed. Please try again.");
       });
   };
 
@@ -80,15 +72,9 @@ function LoginLogout() {
       {token ? (
         <div>
           <p>You are logged in!</p>
-          {/* <UserProfile /> */}
-          {/* <CategoryCreate /> */}
-          {/* <CategoryUpdate /> */}
-          {/* <PromoUpdate /> */}
-          {/* <PromoCreate /> */}
-          {/* <Banner /> */}
-          {/* <BannerUpdate /> */}
-          {/* <BannerCreate /> */}
-          <button classNames="btn btn-warning"  onClick={handleLogout}>Logout</button>
+          <button className="btn btn-warning" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       ) : (
         <form onSubmit={handleLogin}>
@@ -111,9 +97,11 @@ function LoginLogout() {
           />
 
           <button type="submit">Login</button>
-          <p>Dont have an account? click <a href="/Register">register</a></p>
+          {error && <p className="text-danger">{error}</p>}
+          <p>
+            Don't have an account? Click <a href="/Register">register</a>
+          </p>
         </form>
-        
       )}
     </div>
   );
