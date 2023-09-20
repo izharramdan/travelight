@@ -33,6 +33,7 @@ function LoginLogout() {
         console.log(error.response.data);
         setError("Invalid email or password. Please try again.");
         localStorage.setItem("token", error.response.data.token);
+        window.alert("Invalid email or password. Please try again."); // Menampilkan alert
       });
   };
 
