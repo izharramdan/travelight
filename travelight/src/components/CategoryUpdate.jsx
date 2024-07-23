@@ -80,7 +80,7 @@ function CategoryUpdate() {
 
   return (
     <div className="dashboard-update-category">
-<Sidebar />
+      <Sidebar />
       <div>
         {categories.map((category) => (
           <div key={category.id}>
