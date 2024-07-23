@@ -50,7 +50,7 @@ function Navbar() {
               <>
                 <a
                   href="#"
-                  className="nav-link dropdown-toggle mr-4"
+                  className="nav-link dropdown-toggle mr-4 profile-link"
                   role="button"
                   data-bs-toggle="dropdown"
                 >
