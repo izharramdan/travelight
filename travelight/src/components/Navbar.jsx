@@ -43,12 +43,6 @@ function Navbar() {
           <a href="/" className="nav-item nav-link">
             Home
           </a>
-          <a href="#activity-show" className="nav-item nav-link">
-            Category
-          </a>
-          <a href="#promo-show" className="nav-item nav-link">
-            Promo
-          </a>
         </div>
         <div className="navbar-nav ml-auto action-buttons">
           <div className="nav-item dropdown">
