@@ -94,14 +94,14 @@ function Register() {
         required
       />
 
-      <label htmlFor="profilePictureUrl">Profile Picture URL:</label>
+      {/* <label htmlFor="profilePictureUrl">Profile Picture URL:</label>
       <input
         type="url"
         name="profilePictureUrl"
         value={formData.profilePictureUrl}
         onChange={handleChange}
         required
-      />
+      /> */}
 
       <label htmlFor="phoneNumber">Phone Number:</label>
       <input

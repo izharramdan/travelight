@@ -7,7 +7,7 @@ function BannerID() {
   useEffect(() => {
     axios
       .get(
-        "https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/banner/356a28f6-432f-41e0-9ef6-ec2c52e5a324",
+        "https://travel-journal-api-bootcamp.do.dibimbing.id/api/v1/banner/841cd341-9eff-4d00-a996-f6f5d38782dc",
         {
           headers: {
             apiKey: "24405e01-fbc1-45a5-9f5a-be13afcd757c",
