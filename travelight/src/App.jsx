@@ -24,7 +24,7 @@ function App() {
       <BannerID />
       <Promo />
       {/* <PromoID /> */}
-      <ActivityID />
+      {/* <ActivityID /> */}
       <Footer />
       {/* <Categories /> */}
       {/* <CategoryID /> */}

@@ -8,7 +8,7 @@ function Register() {
     name: "",
     password: "",
     passwordRepeat: "",
-    role: "",
+    role: "admin",
     profilePictureUrl: "",
     phoneNumber: "",
   });
@@ -85,14 +85,14 @@ function Register() {
         required
       />
 
-      <label htmlFor="role">Role:</label>
+      {/* <label htmlFor="role">Role:</label>
       <input
         type="text"
         name="role"
         value={formData.role}
         onChange={handleChange}
         required
-      />
+      /> */}
 
       {/* <label htmlFor="profilePictureUrl">Profile Picture URL:</label>
       <input
